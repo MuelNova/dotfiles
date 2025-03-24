@@ -23,3 +23,5 @@ set -gx GPG_TTY (tty)
 
 # 别名
 command -q nvim && alias vim=nvim
+test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
+
