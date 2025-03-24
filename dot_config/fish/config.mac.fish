@@ -24,3 +24,5 @@ end
 fish_add_path -g --path \
     /Library/Apple/usr/bin \
     /Applications/Xcode.app/Contents/Developer/usr/bin
+
+test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish

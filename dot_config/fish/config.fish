@@ -1,12 +1,13 @@
 # ~/.config/fish/config.fish
 # 主配置文件 - 仅包含通用配置和平台判断
 
+fish_add_path -g --path $HOME/.local/bin/env.fish
 
 switch (uname -s)
     case Linux
-        source ~/.config/fish/config.linux.fish
+        source $HOME/.config/fish/config.linux.fish
     case Darwin
-        source ~/.config/fish/config.mac.fish
+        source $HOME/.config/fish/config.mac.fish
 end
 
 ### 通用配置（所有平台生效） ###
@@ -23,5 +24,4 @@ set -gx GPG_TTY (tty)
 
 # 别名
 command -q nvim && alias vim=nvim
-test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 
